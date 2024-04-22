@@ -85,15 +85,15 @@ data_dict = {
     "北市會籍編號": ['']*DATA
 }
 
-# 获取数据
+# getdata
 for i in range(START_PAGE, END_PAGE+1):
     getTitle(i)
 
 
-# 创建DataFrame
+# create DataFrame
 df = pd.DataFrame(data_dict)
 
-# 将DataFrame写入CSV文件
+# write df data to csv
 df.to_csv("file.csv", index=False)
 
 
